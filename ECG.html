@@ -1,1 +1,277 @@
-
+<!--[if gte mso 9]><![endif]-->
+<p>
+	<!--[if gte vml 1]><![endif]--><!--[if !vml]--><span> 
+	<table align="center" cellpadding="0" cellspacing="0">
+		<tbody>
+			<tr>
+				<td width="1092" height="9918" style="vertical-align:top;">
+					<!--[endif]-->
+					<p>
+						<br />
+					</p>
+					<p class="MsoNormal" style="text-align:center;">
+						<span style="font-family:Georgia;font-size:18px;"><span style="font-size:32px;"></span><span style="color:#C00000;font-family:Georgia;font-size:32px;font-weight:bold;">Make a simple ECG!&nbsp;</span></span> 
+					</p>
+					<p class="MsoNormal" style="text-align:center;">
+						<span style="font-family:Georgia;font-size:18px;">Shimiao Li, 2017</span> 
+					</p>
+					<p class="MsoNormal" style="text-align:center;">
+						<span style="font-family:Georgia;font-size:18px;"><br />
+</span>
+					</p>
+					<p class="MsoNormal" style="text-align:center;">
+						<span style="font-size:18px;font-family:Georgia;color:#C00000;font-weight:bold;">Specification</span>
+					</p>
+					<p class="MsoNormal" style="text-align:left;">
+						<span style="font-size:18px;font-family:Georgia;">A=1000</span><span style="font-size:14pt;font-family:Georgia;"> </span><span style="font-size:18px;font-family:Georgia;">(</span><span style="font-size:18px;font-family:Georgia;">±</span><span style="font-size:18px;font-family:Georgia;">5%)</span>
+					</p>
+					<p class="MsoNormal">
+						<span style="font-size:18px;font-family:Georgia;">Low cut-off frequency (-3dB): 0.05Hz</span> 
+					</p>
+					<p class="MsoNormal">
+						<span style="font-size:18px;font-family:Georgia;">High cut-off frequency (-3dB): 100Hz (</span><span style="font-size:18px;font-family:Georgia;">±</span><span style="font-size:14.0pt;font-family:Georgia;"><span></span><span style="font-size:18px;">10Hz)</span></span> 
+					</p>
+					<p class="MsoNormal">
+						<span style="font-size:18px;font-family:Georgia;">Response fluctuation: within </span><span style="font-size:18px;font-family:Georgia;">±</span><span style="font-size:14.0pt;font-family:Georgia;"><span></span><span style="font-size:18px;">3dB</span></span> 
+					</p>
+					<p class="MsoNormal">
+						<span style="font-size:18px;font-family:Georgia;">CMRR: </span><span style="font-size:18px;font-family:Georgia;">≥</span><span style="font-size:14.0pt;font-family:Georgia;"><span></span><span style="font-size:18px;">60dB</span> </span> 
+					</p>
+					<p class="MsoNormal" style="text-indent:42.0pt;">
+						<span style="font-size:18px;font-family:Georgia;">(</span><span style="font-size:18px;font-family:Georgia;">With a 1.50-meter-long shielded line, Vcm within </span><span style="font-size:18px;font-family:Georgia;">±</span><span style="font-size:14.0pt;font-family:Georgia;"><span></span><span style="font-size:18px;">7.5V)</span></span> 
+					</p>
+					<p class="MsoNormal">
+						<span style="font-size:18px;font-family:Georgia;">Differential input resistance: </span><span style="font-size:18px;font-family:Georgia;">≥</span><span style="font-size:14.0pt;font-family:Georgia;"><span></span><span style="font-size:18px;">5M</span></span><span style="font-size:18px;font-family:Georgia;">Ω</span> 
+					</p>
+					<p class="MsoNormal">
+						<span style="font-size:18px;font-family:Georgia;">UOPP: &gt;</span><span style="font-size:18px;font-family:Georgia;">±</span><span style="font-size:14.0pt;font-family:Georgia;"><span></span><span style="font-size:18px;">10V</span></span> 
+					</p>
+					<p class="MsoNormal">
+						<span style="font-size:18px;font-family:Georgia;">In actual test on human body, the equivalent input noise is less than 400</span><span style="font-size:18px;font-family:&quot;">μ</span><span style="font-size:18px;font-family:Georgia;">V</span> 
+					</p>
+					<p class="MsoNormal">
+						<span style="font-size:18px;font-family:Georgia;">Design a dc stabilized power supply, if possible. </span> 
+					</p>
+					<p class="MsoNormal" style="text-indent:42.0pt;">
+						<span style="font-size:18px;font-family:Georgia;">(</span><span style="font-size:18px;font-family:Georgia;">AC noise output: Vpp&lt;3mV)</span> 
+					</p>
+					<p class="MsoNormal" style="text-align:center;">
+						<span style="font-size:18px;font-family:Georgia;color:#C00000;font-weight:bold;">Specification rough analysis: </span> 
+					</p>
+					<p class="MsoNormal">
+						<span style="font-size:18px;font-family:Georgia;">This is a design for testing feeble signals of human body. The implementation of the system requires application of amplifier, noise suppression and active filtering.</span> 
+					</p>
+					<p class="MsoNormal" style="text-align:center;">
+						<span style="font-size:18px;font-family:Georgia;color:#C00000;font-weight:bold;">Design analysis: </span> 
+					</p>
+					<p class="MsoNormal">
+						<span style="font-size:18px;font-family:Georgia;color:#0695F0;font-weight:bold;">Amplifier:</span> 
+					</p>
+					<p class="MsoNormal">
+						<span style="font-size:18px;font-family:Georgia;">Proper Amplifier is need for amplifying the weak bio-signal and raising SNR.</span> 
+					</p>
+					<p class="MsoNormal">
+						<span style="font-size:18px;font-family:Georgia;font-weight:bold;">①</span><span style="font-size:18px;font-family:Georgia;font-weight:bold;">Differential amplifier?</span> 
+					</p>
+					<p class="MsoNormal">
+						<span style="font-size:18px;font-family:Georgia;">No</span> 
+					</p>
+					<p class="MsoNormal">
+						<span style="font-size:18px;font-family:Georgia;">Despite that differential amplifier enables reduction of common mode disturbances, there are still problems in 2 aspects:</span> 
+					</p>
+					<p class="MsoNormal">
+						<span style="font-size:18px;font-family:Georgia;">Since ECG works by extracting information by connection with human bodies, it is subject to a variable source resistance Rs (Rs includes contact resistance between electrode &amp; human skin, muscles, bones and other tissues) which is time-varying and differs from man to man (typically ranging from k</span><span style="font-size:18px;font-family:&quot;">Ω </span><span style="font-size:18px;font-family:Georgia;">to M</span><span style="font-size:18px;font-family:Georgia;">Ω</span><span style="font-size:18px;font-family:Georgia;">). </span><span style="font-size:18px;font-family:Georgia;">Therefore, the use of differential amplifier will surely lead to an unstable gain.</span> 
+					</p>
+					<p class="MsoNormal">
+						<span style="font-size:18px;font-family:Georgia;">Due to the varying characteristics of Rs, as is mentioned above, the Rs on the left arm branch is different from that on the right, leading to resistance mismatch of the differential amplifier. Then the amplifier will have a poor CMRR, which means vulnerability to common mode input. What</span><span style="font-size:18px;font-family:Georgia;">’</span><span style="font-size:18px;font-family:Georgia;">s worse, the input signal extracted from human body has a large common mode component mainly due to power line interference. Therefore, the common mode interference may even overwhelm the electrocardiosignal Vd, resulting in test failure.</span><span style="font-size:14.0pt;font-family:Georgia;"> </span> 
+					</p>
+					<p class="MsoNormal">
+						<span style="font-size:18px;font-family:Georgia;font-weight:bold;">② </span><span style="font-size:14.0pt;font-family:Georgia;font-weight:bold;"><span></span><span style="font-size:18px;">3 op amp:</span></span> 
+					</p>
+					<p class="MsoNormal">
+						<span style="font-size:18px;font-family:Georgia;">YES</span> 
+					</p>
+					<p class="MsoNormal">
+						<!--[if gte vml 1]><![endif]--><!--[if !word & !ppt & !excel & !vml]--><img width="732" height="553" src="ECG.files/image3301.jpg" /><!--[endif]-->
+					</p>
+					<p class="MsoNormal">
+						<span style="font-size:18px;font-family:Georgia;">The first stage circuit is a 2 op-amp structure with differential input and output. It enables a considerably high input resistance in which case variance in Rs will become negligible. Also, by choosing A1 and A2 with the same characteristics, we can get perfect CMRR in the first stage. Additionally, the 80 dB gain in the specification can be easily achieved by designing a second stage of high CMRR and resistance match.</span> 
+					</p>
+					<p class="MsoNormal">
+						<span style="font-size:18px;font-family:Georgia;font-weight:bold;">③ </span><span style="font-size:18px;font-family:Georgia;font-weight:bold;">Special improvement for ECG amplifier:</span> 
+					</p>
+					<p class="MsoNormal">
+						<span style="font-size:18px;font-family:Georgia;">Since a DC polarization tendency will occur in detection electrocardiosignal, a high pass filter is needed to remove the DC component but bring no distortion of the useful signal. Typically, the lowest possible frequency of eletrocardiosignal is 0,5Hz (30 beats per minute). To avoid linear signal distortion due to phase shifting, the low cut-off frequency should be 0.05Hz. The filter can be implemented using RC network (since there is no special requirements for the characteristics of low cut-off frequency).&nbsp; </span> 
+					</p>
+					<p class="MsoNormal">
+						<!--[if gte vml 1]><![endif]--><!--[if !word & !ppt & !excel & !vml]--><img width="830" height="455" src="ECG.files/image3291.jpg" /><!--[endif]-->
+					</p>
+					<p class="MsoNormal">
+						<span style="font-size:18px;font-family:Georgia;font-weight:bold;">④ </span><span style="font-size:18px;font-family:Georgia;font-weight:bold;">Proper components selection for ECG application:</span> 
+					</p>
+					<p class="MsoNormal">
+						<span style="font-size:18px;font-family:Georgia;color:red;">Selection of C1 &amp; R8 </span> 
+					</p>
+					<p class="MsoNormal">
+						<span style="font-size:18px;font-family:Georgia;">Since electric leakage of C1 will lead to drift of Uout, we should choose capacitance with good dielectric characteristics rather than electrolytic capacitors. Here we select C1=1</span><span style="font-size:18px;font-family:&quot;">μ</span><span style="font-size:18px;font-family:Georgia;">F and R8=3M</span><span style="font-size:18px;font-family:Georgia;">Ω</span><span style="font-size:18px;font-family:Georgia;">。 </span> 
+					</p>
+					<p class="MsoNormal">
+						<span style="font-size:18px;font-family:Georgia;color:red;">Selection of A in 2 stages</span> 
+					</p>
+					<p class="MsoNormal">
+						<span style="font-size:18px;font-family:Georgia;">Increase of the gain in the first stage above can serve to reduce noise. However, it will also lead to risk of saturation in amplifiers due to the effect of DC polarization. Here we set the gain of 3 op-amp =40 and non-inverting amplifier A4 gain=25. Additionally, the resistance in the second stage are carefully matched in order to get high CMRR. For A1~A4, we can select FET-input amplifiers for particularly low input bias current.</span> 
+					</p>
+					<p class="MsoNormal">
+						<span style="font-size:18px;font-family:Georgia;">C. Or to make it convenient, we can just choose </span><span style="font-size:18px;font-family:Georgia;color:red;">integrated amplifier INA2128</span><span style="font-size:18px;font-family:Georgia;"> which proves high CMRR, low bias current and high temperature stability.</span> 
+					</p>
+					<p class="MsoNormal">
+						<span style="font-size:18px;font-family:Georgia;color:#0695F0;font-weight:bold;">Active filter:</span> 
+					</p>
+					<p class="MsoNormal">
+						<span style="font-size:18px;font-family:Georgia;">The active filter is mainly responsible for providing required performance for high-frequency response. </span> 
+					</p>
+					<p class="MsoNormal">
+						<span style="font-size:18px;font-family:Georgia;">The design analysis is shown as follows:</span> 
+					</p>
+					<p class="MsoNormal">
+						<span style="font-size:18px;font-family:Georgia;font-weight:bold;">Selection of the type of filtering</span> 
+					</p>
+					<p class="MsoNormal">
+						<span style="font-size:18px;font-family:Georgia;">For less distortion after signal processing, Bessel filtering is preferred for ECG. </span> 
+					</p>
+					<p class="MsoNormal">
+						<span style="font-size:18px;font-family:Georgia;font-weight:bold;">B. Order</span> 
+					</p>
+					<p class="MsoNormal">
+						<span style="font-size:18px;font-family:Georgia;">With no special requirements for high frequency cut-off characteristics, we can design a simple 2</span><span style="font-size:18px;font-family:Georgia;"><sup>nd</sup></span><span style="font-size:18px;font-family:Georgia;"> order Bessel filter for the system. </span> 
+					</p>
+					<p class="MsoNormal">
+						<!--[if gte vml 1]><![endif]--><!--[if !word & !ppt & !excel & !vml]--><img width="656" height="249" src="ECG.files/image3281.jpg" /><!--[endif]-->
+					</p>
+					<p class="MsoNormal">
+						<span style="font-size:18px;font-family:Georgia;">(</span><span style="font-size:18px;font-family:Georgia;">For a steep cut-off characteristic, a fourth order Bessel filter can be used by simply connecting 2 2</span><span style="font-size:18px;font-family:Georgia;"><sup>nd</sup></span><span style="font-size:18px;font-family:Georgia;"> order filters in serial )</span> 
+					</p>
+					<p class="MsoNormal">
+						<span style="font-size:18px;font-family:Georgia;color:#0695F0;font-weight:bold;">Low-noise stabilized power supply:</span> 
+					</p>
+					<p class="MsoNormal">
+						<span style="font-size:18px;font-family:Georgia;">Since UOPP is required to be &gt;</span><span style="font-size:18px;font-family:Georgia;">±</span><span style="font-size:14.0pt;font-family:Georgia;"><span></span><span style="font-size:18px;">10V, the power supply should at least be </span></span><span style="font-size:18px;font-family:Georgia;">±</span><span style="font-size:14.0pt;font-family:Georgia;"><span></span><span style="font-size:18px;">12 or </span></span><span style="font-size:18px;font-family:Georgia;">±</span><span style="font-size:14.0pt;font-family:Georgia;"><span></span><span style="font-size:18px;">15. Commonly used 3 terminal stabilized power supply can not met the demand of a AC output noise less than 3mVpp. To further reduce noise, we need a combination of commonly used power stabilization circuit and external amplification.</span></span> 
+					</p>
+					<p class="MsoNormal">
+						<!--[if gte vml 1]><![endif]--><!--[if !word & !ppt & !excel & !vml]--><img width="641" height="557" src="ECG.files/image3271.jpg" /><!--[endif]-->
+					</p>
+					<p class="MsoNormal">
+						<span style="font-size:18px;font-family:Georgia;color:#0695F0;font-weight:bold;">System Control</span> 
+					</p>
+					<p class="MsoNormal">
+						<span style="font-size:18px;font-family:Georgia;">This can be implemented using an MCU.</span> 
+					</p>
+					<p class="MsoNormal">
+						<span style="font-size:18px;font-family:Georgia;color:#C00000;font-weight:bold;">Implementation </span> 
+					</p>
+					<p class="MsoNormal">
+						<span style="font-size:18px;font-family:Georgia;">(</span><span style="font-size:14.0pt;font-family:Georgia;"><span></span><span style="font-size:18px;">1) General view:</span></span> 
+					</p>
+					<p class="MsoNormal">
+						<!--[if gte vml 1]><![endif]--><!--[if !word & !ppt & !excel & !vml]--><img width="811" height="390" src="ECG.files/image3261.jpg" /><!--[endif]-->
+					</p>
+					<p class="MsoNormal">
+						<span style="font-size:18px;font-family:Georgia;">Typically, electrocardiosignal has the following characteristics:</span> 
+					</p>
+					<p class="MsoNormal">
+						<span style="font-size:18px;font-family:Georgia;">Magnitude: 20</span><span style="font-size:18px;font-family:&quot;">μ</span><span style="font-size:18px;font-family:Georgia;">V-5mV</span> 
+					</p>
+					<p class="MsoNormal">
+						<span style="font-size:18px;font-family:Georgia;">Frequency: 0.05-100Hz</span> 
+					</p>
+					<p class="MsoNormal">
+						<span style="font-size:18px;font-family:Georgia;">Source Resistance Rs: 1~50K</span><span style="font-size:18px;font-family:&quot;">Ω</span> 
+					</p>
+					<p class="MsoNormal">
+						<span style="font-size:18px;font-family:Georgia;">Amplifier</span><span style="font-size:18px;font-family:Georgia;">：</span> 
+					</p>
+					<p class="MsoNormal">
+						<span style="font-size:18px;font-family:Georgia;">For sake of reduced noise and high CMRR,we select INA2128 for amplification of electrocardiosignal in 2 channels which use first and second standard lead, respectively.</span> 
+					</p>
+					<p class="MsoNormal">
+						<span style="font-size:18px;font-family:Georgia;">Here we set the gain of INA2128=40, thus</span> 
+					</p>
+					<p class="MsoNormal">
+						<!--[if gte vml 1]><![endif]--><!--[if !word & !ppt & !excel & !vml]--><img width="433" height="91" src="ECG.files/image3251.gif" /><!--[endif]-->
+					</p>
+					<p class="MsoNormal">
+						<span style="font-size:18px;font-family:Georgia;">And we can get</span> 
+					</p>
+					<p class="MsoNormal">
+						<!--[if gte vml 1]><![endif]--><!--[if !word & !ppt & !excel & !vml]--><img width="317" height="51" src="ECG.files/image3241.gif" /><!--[endif]-->
+					</p>
+					<p class="MsoNormal">
+						<span style="font-size:18px;font-family:Georgia;">INA2128 provides a CMRR</span><span style="font-size:18px;font-family:Georgia;">≥</span><span style="font-size:14.0pt;font-family:Georgia;"><span></span><span style="font-size:18px;">120dB, which meets the demand. For higher CMRR, we can use right leg drive (RLD) to further decrease common mode gain.</span></span> 
+					</p>
+					<p class="MsoNormal">
+						<span style="font-size:18px;font-family:Georgia;">Also, the use of a differential amplifier A3 inside INA2128 serve to reduce the common mode output. </span> 
+					</p>
+					<p class="MsoNormal">
+						<span style="font-size:18px;font-family:Georgia;">High pass active filter:</span> 
+					</p>
+					<p class="MsoNormal">
+						<span style="font-size:18px;font-family:Georgia;">High pass filtering is introduced in the system to reduce the negative effect of DC polarization.</span> 
+					</p>
+					<p class="MsoNormal">
+						<!--[if gte vml 1]><![endif]--><!--[if !word & !ppt & !excel & !vml]--><img width="468" height="400" src="ECG.files/image3231.jpg" /><!--[endif]--><span style="font-family:Georgia;"><span></span><span style="font-size:18px;">5</span></span> 
+					</p>
+					<p class="MsoNormal">
+						<span style="font-size:18px;font-family:Georgia;">We select the low cut-off frequency= 0.05Hz. By selecting C1=1</span><span style="font-size:18px;font-family:&quot;">μ</span><span style="font-size:18px;font-family:Georgia;">F, R5=5M</span><span style="font-size:18px;font-family:Georgia;">Ω</span><span style="font-size:18px;font-family:Georgia;">, </span><span style="font-size:18px;font-family:Georgia;">we can get a low cut-off frequency:</span> 
+					</p>
+					<p class="MsoNormal">
+						<!--[if gte vml 1]><![endif]--><!--[if !word & !ppt & !excel & !vml]--><img width="402" height="98" src="ECG.files/image3221.gif" /><!--[endif]-->
+					</p>
+					<p class="MsoNormal">
+						<span style="font-size:18px;font-family:Georgia;">Bessel filter:</span> 
+					</p>
+					<p class="MsoNormal">
+						<!--[if gte vml 1]><![endif]--><!--[if !word & !ppt & !excel & !vml]--><img width="831" height="300" src="ECG.files/image3211.jpg" /><!--[endif]-->
+					</p>
+					<p class="MsoNormal">
+						<span style="font-size:18px;font-family:Georgia;">According to the design manual, we select C2=C3=510pF, R11 = R12 = 2.2M</span><span style="font-size:18px;font-family:&quot;">Ω</span><span style="font-size:18px;font-family:Georgia;">.</span> 
+					</p>
+					<p class="MsoNormal">
+						<span style="font-size:18px;font-family:Georgia;">Stabilized power supply:</span> 
+					</p>
+					<p class="MsoNormal">
+						<span style="font-size:18px;font-family:Georgia;">For stabilized a power supply of </span><span style="font-size:18px;font-family:Georgia;">±</span><span style="font-size:14.0pt;font-family:Georgia;"><span></span><span style="font-size:18px;">15V, we use a stabilized circuit with symmetrical structure:</span></span> 
+					</p>
+					<p class="MsoNormal">
+						<!--[if gte vml 1]><![endif]--><!--[if !word & !ppt & !excel & !vml]--><img width="528" height="824" src="ECG.files/image3201.jpg" /><!--[endif]-->
+					</p>
+					<p class="MsoNormal">
+						<span style="font-size:18px;font-family:Georgia;">Software implementation:</span> 
+					</p>
+					<p class="MsoNormal">
+						<span style="font-size:18px;font-family:Georgia;">The signal wave is converted to digital signal by an 8-bit ADC using a sampling rate 2000Hz.</span> 
+					</p>
+					<p class="MsoNormal">
+						<span style="font-size:18px;font-family:Georgia;">Flow diagram:</span> 
+					</p>
+					<p class="MsoNormal">
+						<!--[if gte vml 1]><![endif]--><!--[if !word & !ppt & !excel & !vml]--><img width="831" height="623" src="ECG.files/image3321.jpg" /><!--[endif]-->
+					</p>
+					<p class="MsoNormal">
+						<span style="font-size:18px;font-family:Georgia;">&nbsp;</span> 
+					</p>
+					<p class="MsoNormal">
+						<span style="font-size:18px;font-family:Georgia;">&nbsp;</span> 
+					</p>
+					<p class="MsoNormal">
+						<span style="font-size:18px;font-family:Georgia;">Finally, the system should be tested on waveform from both signal generator and human bodies to prove its performance.</span> 
+					</p>
+					<p>
+						<br />
+					</p>
+<!--[if !vml]-->
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</span><!--[endif]-->
+</p>
