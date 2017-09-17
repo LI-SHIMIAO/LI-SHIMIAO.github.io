@@ -49,17 +49,25 @@
 					<p class="MsoNormal">
 						<span style="font-size:18px;font-family:Georgia;">Design a dc stabilized power supply, if possible.</span>&nbsp;<span style="font-size:18px;font-family:Georgia;">(</span><span style="font-size:18px;font-family:Georgia;">AC noise output: Vpp&lt;3mV)</span> 
 					</p>
+					<p class="MsoNormal">
+						<span style="font-size:18px;font-family:Georgia;"><br />
+</span>
+					</p>
 					<p class="MsoNormal" style="text-align:center;">
 						<span style="font-size:24px;font-family:Georgia;color:#C00000;font-weight:bold;">Specification rough analysis: </span> 
 					</p>
 					<p class="MsoNormal">
 						<span style="font-size:18px;font-family:Georgia;">This is a design for testing feeble signals of human body. The implementation of the system requires application of amplifier, noise suppression and active filtering.</span> 
 					</p>
+					<p class="MsoNormal">
+						<span style="font-size:18px;font-family:Georgia;"><br />
+</span>
+					</p>
 					<p class="MsoNormal" style="text-align:center;">
 						<span style="font-size:24px;font-family:Georgia;color:#C00000;font-weight:bold;">Design analysis: </span> 
 					</p>
 					<p class="MsoNormal">
-						<span style="font-size:18px;font-family:Georgia;color:#0695F0;font-weight:bold;">Amplifier:</span> 
+						<span style="font-size:18px;font-family:Georgia;color:#0695F0;font-weight:bold;"><span style="font-size:24px;">Amplifier</span>:</span> 
 					</p>
 					<p class="MsoNormal">
 						<span style="font-size:18px;font-family:Georgia;">Proper Amplifier is need for amplifying the weak bio-signal and raising SNR.</span> 
@@ -106,22 +114,26 @@
 						<span style="font-size:18px;font-family:Georgia;font-weight:bold;">④ </span><span style="font-size:18px;font-family:Georgia;font-weight:bold;">Proper components selection for ECG application:</span> 
 					</p>
 					<p class="MsoNormal">
-						<span style="font-size:18px;font-family:Georgia;color:red;">Selection of C1 &amp; R8 </span> 
+						<span style="font-size:18px;font-family:Georgia;color:red;">A. Selection of C1 &amp; R8 </span> 
 					</p>
 					<p class="MsoNormal">
 						<span style="font-size:18px;font-family:Georgia;">Since electric leakage of C1 will lead to drift of Uout, we should choose capacitance with good dielectric characteristics rather than electrolytic capacitors. Here we select C1=1</span><span style="font-size:18px;font-family:&quot;">μ</span><span style="font-size:18px;font-family:Georgia;">F and R8=3M</span><span style="font-size:18px;font-family:Georgia;">Ω</span><span style="font-size:18px;font-family:Georgia;">。 </span> 
 					</p>
 					<p class="MsoNormal">
-						<span style="font-size:18px;font-family:Georgia;color:red;">Selection of A in 2 stages</span> 
+						<span style="font-size:18px;font-family:Georgia;color:red;">B. Selection of gain</span>
 					</p>
 					<p class="MsoNormal">
 						<span style="font-size:18px;font-family:Georgia;">Increase of the gain in the first stage above can serve to reduce noise. However, it will also lead to risk of saturation in amplifiers due to the effect of DC polarization. Here we set the gain of 3 op-amp =40 and non-inverting amplifier A4 gain=25. Additionally, the resistance in the second stage are carefully matched in order to get high CMRR. For A1~A4, we can select FET-input amplifiers for particularly low input bias current.</span> 
 					</p>
 					<p class="MsoNormal">
-						<span style="font-size:18px;font-family:Georgia;">C. Or to make it convenient, we can just choose </span><span style="font-size:18px;font-family:Georgia;color:red;">integrated amplifier INA2128</span><span style="font-size:18px;font-family:Georgia;"> which proves high CMRR, low bias current and high temperature stability.</span> 
+						<span style="font-size:18px;font-family:Georgia;"><span style="color:#E53333;">C.</span> Or to make it convenient, we can just choose </span><span style="font-size:18px;font-family:Georgia;color:red;">integrated amplifier INA2128</span><span style="font-size:18px;font-family:Georgia;"> which proves high CMRR, low bias current and high temperature stability.</span> 
 					</p>
 					<p class="MsoNormal">
-						<span style="font-size:18px;font-family:Georgia;color:#0695F0;font-weight:bold;">Active filter:</span> 
+						<span style="font-size:18px;font-family:Georgia;"><br />
+</span>
+					</p>
+					<p class="MsoNormal">
+						<span style="font-size:24px;font-family:Georgia;color:#0695F0;font-weight:bold;">Active filter:</span> 
 					</p>
 					<p class="MsoNormal">
 						<span style="font-size:18px;font-family:Georgia;">The active filter is mainly responsible for providing required performance for high-frequency response. </span> 
@@ -130,7 +142,7 @@
 						<span style="font-size:18px;font-family:Georgia;">The design analysis is shown as follows:</span> 
 					</p>
 					<p class="MsoNormal">
-						<span style="font-size:18px;font-family:Georgia;font-weight:bold;">Selection of the type of filtering</span> 
+						<span style="font-size:18px;font-family:Georgia;font-weight:bold;">A. Selection of the type of filtering</span> 
 					</p>
 					<p class="MsoNormal">
 						<span style="font-size:18px;font-family:Georgia;">For less distortion after signal processing, Bessel filtering is preferred for ECG. </span> 
@@ -149,7 +161,7 @@
 						<span style="font-size:18px;font-family:Georgia;">(</span><span style="font-size:18px;font-family:Georgia;">For a steep cut-off characteristic, a fourth order Bessel filter can be used by simply connecting 2 2</span><span style="font-size:18px;font-family:Georgia;"><sup>nd</sup></span><span style="font-size:18px;font-family:Georgia;"> order filters in serial )</span> 
 					</p>
 					<p class="MsoNormal">
-						<span style="font-size:18px;font-family:Georgia;color:#0695F0;font-weight:bold;">Low-noise stabilized power supply:</span> 
+						<span style="font-size:24px;font-family:Georgia;color:#0695F0;font-weight:bold;">Low-noise stabilized power supply:</span> 
 					</p>
 					<p class="MsoNormal">
 						<span style="font-size:18px;font-family:Georgia;">Since UOPP is required to be &gt;</span><span style="font-size:18px;font-family:Georgia;">±</span><span style="font-size:14.0pt;font-family:Georgia;"><span></span><span style="font-size:18px;">10V, the power supply should at least be </span></span><span style="font-size:18px;font-family:Georgia;">±</span><span style="font-size:14.0pt;font-family:Georgia;"><span></span><span style="font-size:18px;">12 or </span></span><span style="font-size:18px;font-family:Georgia;">±</span><span style="font-size:14.0pt;font-family:Georgia;"><span></span><span style="font-size:18px;">15. Commonly used 3 terminal stabilized power supply can not met the demand of a AC output noise less than 3mVpp. To further reduce noise, we need a combination of commonly used power stabilization circuit and external amplification.</span></span> 
@@ -159,16 +171,20 @@
 <!--[endif]-->
 					</p>
 					<p class="MsoNormal">
-						<span style="font-size:18px;font-family:Georgia;color:#0695F0;font-weight:bold;">System Control</span> 
+						<span style="font-size:24px;font-family:Georgia;color:#0695F0;font-weight:bold;">System Control</span> 
 					</p>
 					<p class="MsoNormal">
 						<span style="font-size:18px;font-family:Georgia;">This can be implemented using an MCU.</span> 
 					</p>
 					<p class="MsoNormal">
-						<span style="font-size:18px;font-family:Georgia;color:#C00000;font-weight:bold;">Implementation </span> 
+						<span style="font-size:18px;font-family:Georgia;"><br />
+</span>
 					</p>
-					<p class="MsoNormal">
-						<span style="font-size:18px;font-family:Georgia;">(</span><span style="font-size:14.0pt;font-family:Georgia;"><span></span><span style="font-size:18px;">1) General view:</span></span> 
+					<p class="MsoNormal" style="text-align:center;">
+						<span style="font-size:24px;font-family:Georgia;color:#C00000;font-weight:bold;">Implementation</span>
+					</p>
+					<p class="MsoNormal" style="text-align:left;">
+						<span style="font-size:18px;font-family:Georgia;"><span style="color:#337FE5;font-size:18px;"><strong></strong></span><span style="color:#337FE5;font-size:18px;"><strong>(</strong></span></span><span style="font-size:18px;font-family:Georgia;color:#337FE5;"><span style="font-size:18px;color:#337FE5;"><strong>1) General view:</strong></span></span>
 					</p>
 					<p class="MsoNormal">
 						<img src="https://github.com/LI-SHIMIAO/li-shimiao.github.io/blob/master/ecg5.png?raw=true" width="600" height="288" alt="" /><br />
@@ -187,7 +203,7 @@
 						<span style="font-size:18px;font-family:Georgia;">Source Resistance Rs: 1~50K</span><span style="font-size:18px;font-family:&quot;">Ω</span> 
 					</p>
 					<p class="MsoNormal">
-						<span style="font-size:18px;font-family:Georgia;">Amplifier</span><span style="font-size:18px;font-family:Georgia;">：</span> 
+						<span style="font-size:18px;font-family:Georgia;color:#337FE5;"><strong>(2) Amplifier</strong></span><span style="font-size:18px;font-family:Georgia;"><strong>：</strong></span> 
 					</p>
 					<p class="MsoNormal">
 						<span style="font-size:18px;font-family:Georgia;">For sake of reduced noise and high CMRR,we select INA2128 for amplification of electrocardiosignal in 2 channels which use first and second standard lead, respectively.</span> 
@@ -199,13 +215,10 @@
 						<img src="https://github.com/LI-SHIMIAO/li-shimiao.github.io/blob/master/eq1.png?raw=true" width="250" height="79" alt="" /> 
 					</p>
 					<p class="MsoNormal">
-						<span style="font-size:18px;font-family:Georgia;">INA2128 provides a CMRR</span><span style="font-size:18px;font-family:Georgia;">≥</span><span style="font-size:14.0pt;font-family:Georgia;"><span></span><span style="font-size:18px;">120dB, which meets the demand. For higher CMRR, we can use right leg drive (RLD) to further decrease common mode gain.</span></span> 
+						<span style="font-size:18px;font-family:Georgia;">INA2128 provides a CMRR</span><span style="font-family:Georgia;font-size:18px;">120dB, which meets the demand. For higher CMRR, we can use right leg drive (RLD) to further decrease common mode gain.</span>&nbsp;<span style="font-family:Georgia;font-size:18px;">Also, the use of a differential amplifier A3 inside INA2128 serve to reduce the common mode output.</span>
 					</p>
 					<p class="MsoNormal">
-						<span style="font-size:18px;font-family:Georgia;">Also, the use of a differential amplifier A3 inside INA2128 serve to reduce the common mode output. </span> 
-					</p>
-					<p class="MsoNormal">
-						<span style="font-size:18px;font-family:Georgia;">High pass active filter:</span> 
+						<span style="font-size:18px;font-family:Georgia;color:#337FE5;"><strong>(3) High pass active filter:</strong></span> 
 					</p>
 					<p class="MsoNormal">
 						<span style="font-size:18px;font-family:Georgia;">High pass filtering is introduced in the system to reduce the negative effect of DC polarization.</span> 
@@ -227,7 +240,7 @@
 						<span style="font-size:18px;font-family:Georgia;">According to the design manual, we select C2=C3=510pF, R11 = R12 = 2.2M</span><span style="font-size:18px;font-family:&quot;">Ω</span><span style="font-size:18px;font-family:Georgia;">.</span> 
 					</p>
 					<p class="MsoNormal">
-						<span style="font-size:18px;font-family:Georgia;">Stabilized power supply:</span> 
+						<span style="font-size:18px;font-family:Georgia;color:#337FE5;"><strong>(4) Stabilized power supply:</strong></span> 
 					</p>
 					<p class="MsoNormal">
 						<span style="font-size:18px;font-family:Georgia;">For stabilized a power supply of </span><span style="font-size:18px;font-family:Georgia;">±</span><span style="font-size:14.0pt;font-family:Georgia;"><span></span><span style="font-size:18px;">15V, we use a stabilized circuit with symmetrical structure:</span></span> 
@@ -237,7 +250,7 @@
 <!--[endif]-->
 					</p>
 					<p class="MsoNormal">
-						<span style="font-size:18px;font-family:Georgia;">Software implementation:</span> 
+						<span style="font-size:18px;font-family:Georgia;color:#337FE5;"><strong>(5) Software implementation:</strong></span> 
 					</p>
 					<p class="MsoNormal">
 						<span style="font-size:18px;font-family:Georgia;">The signal wave is converted to digital signal by an 8-bit ADC using a sampling rate 2000Hz.</span> 
@@ -252,7 +265,7 @@
 						<br />
 					</p>
 					<p class="MsoNormal">
-						<span style="font-size:18px;font-family:Georgia;">Finally, the system should be tested on waveform from both signal generator and human bodies to prove its performance.</span> 
+						<span style="font-size:18px;font-family:Georgia;color:#E56600;"><strong>Finally, the system should be tested on waveform from both signal generator and human bodies to prove its performance.</strong></span> 
 					</p>
 					<p>
 						<br />
